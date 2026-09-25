@@ -1,0 +1,316 @@
+/* Reset margin and padding for full height layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Image to cover the full screen */
+.page-header-image {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+.page-header-image:hover {
+  transform: scale(1.05);
+}
+/* Custom hover effect for navbar links */
+.navbar-nav .nav-link {
+  color: white; /* Default text color */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #28a745 !important; /* Green color when hovered */
+  transform: scale(1.1); /* Slight scale effect to make the link "pop" */
+}
+
+/* For icons inside navbar links */
+.navbar-nav .nav-link i {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover i {
+  color: #28a745 !important; /* Green color for icons */
+  transform: scale(1.1); /* Slight scale effect for icons */
+}
+
+/* Ensure navbar text is green on hover */
+.navbar-nav .nav-link:hover .nav-link-inner--text {
+  color: #28a745 !important; /* Green text color for the text part of the nav link */
+}
+
+.nav-link-inner--textlogout:hover {
+  color: red !important; /* Make the text red */
+}
+.navbar-main {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* lighter shadow */
+}
+.navbar .collapse-close {
+  height: 48px;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Welcome container */
+.container_welcome {
+  background: linear-gradient(to right, #4b0082, #800080);
+  padding: 2rem; /* Increased padding for better responsiveness */
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
+
+
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the welcome container */
+.container_welcome:hover {
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Scaling effect for h1 */
+.container_welcome h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease;
+  transform: scale(0.7); /* Initial small size */
+  animation: scaleIn 1s forwards; /* Animation to grow on page load */
+}
+
+/* Animation for the text scaling up */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Hover effect for h1 */
+.container_welcome:hover h1 {
+  color: #ffd700;
+  transform: scale(1); /* This is for hover effect */
+}
+
+.section.features-6::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.section.features-6:hover .info {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(107, 5, 166, 0.2);
+  
+}
+
+
+
+/* Features info card */
+.info {
+  background: #f8f9fa;
+  padding: 2rem; /* Reduced padding for smaller boxes */
+  margin: 2rem;
+  border-radius: 10px; /* Slightly smaller border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; /* Center text and image */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(107, 5, 166, 0.2);
+  background: #f1f1f1;
+}
+
+.info h6.info-title {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+
+/* Adjust the title to make it more prominent */
+.info-title {
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+
+/* Tech Stack Section */
+.container-fluid.shado {
+  background-color: #f8f9fa;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.container-fluid.shado img {
+  height: 80px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.container-fluid.shado img:hover {
+  transform: scale(1.1);
+}
+
+.container-fluid.shado h6 {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+
+
+
+.info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(107, 5, 166, 0.2);
+  background: #f1f1f1;
+}
+
+.info h6.info-title {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 599px) {
+  .info {
+    padding: 1rem;  /* Adjust padding for mobile */
+    margin: 0.5rem; /* Reduce margin */
+  }
+
+  .info img {
+    width: 40%; /* Reduce image size */
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Navbar responsive behavior */
+@media (max-width: 599px) {
+  .navbar-nav .nav-link {
+    font-size: 14px;  /* Smaller font size for smaller screens */
+  }
+  
+  .navbar-brand img {
+    width: 100%;
+    max-width: 65px; /* Adjust logo size for small screens */
+  }
+
+  .container_welcome h1 {
+    font-size: 2rem;
+  }
+
+  .section.features-6 .col-lg-6 img {
+    width: 100%;  /* Adjust image size */
+    margin: 0 auto;
+  }
+
+  .footer-container {
+    flex-direction: column;  /* Stack items vertically */
+    text-align: center;
+  }
+
+ 
+}
+
+/* Footer */
+.footer {
+  color: white;
+
+  text-align: center;
+  
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap;  /* Ensure flexibility for small screens */
+}
+.footer {
+
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+
+/* Responsive: Horizontal layout on wider screens */
+@media (min-width: 600px) {
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-text {
+    margin-bottom: 0;
+  }
+}
+/* Responsive: Mobile layout for smaller screens */
+@media (max-width: 599px) {
+  .footer-container {
+    text-align: center;
+  }
+
+  .footer-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    font-size: 16px;
+  }
+}
+/* */
