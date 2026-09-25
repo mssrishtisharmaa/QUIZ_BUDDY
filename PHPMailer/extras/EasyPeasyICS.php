@@ -1,22 +1,4 @@
 <?php
-/**
- * EasyPeasyICS Simple ICS/vCal data generator.
- * @author Marcus Bointon <phpmailer@synchromedia.co.uk>
- * @author Manuel Reinhard <manu@sprain.ch>
- *
- * Built with inspiration from
- * http://stackoverflow.com/questions/1463480/how-can-i-use-php-to-dynamically-publish-an-ical-file-to-be-read-by-google-calend/1464355#1464355
- * History:
- * 2010/12/17 - Manuel Reinhard - when it all started
- * 2014 PHPMailer project becomes maintainer
- */
-
-/**
- * Class EasyPeasyICS.
- * Simple ICS data generator
- * @package phpmailer
- * @subpackage easypeasyics
- */
 class EasyPeasyICS
 {
     /**
@@ -38,17 +20,6 @@ class EasyPeasyICS
     {
         $this->calendarName = $calendarName;
     }
-
-    /**
-     * Add an event to this calendar.
-     * @param string $start The start date and time as a unix timestamp
-     * @param string $end The end date and time as a unix timestamp
-     * @param string $summary A summary or title for the event
-     * @param string $description A description of the event
-     * @param string $url A URL for the event
-     * @param string $uid A unique identifier for the event - generated automatically if not provided
-     * @return array An array of event details, including any generated UID
-     */
     public function addEvent($start, $end, $summary = '', $description = '', $url = '', $uid = '')
     {
         if (empty($uid)) {
@@ -91,20 +62,12 @@ class EasyPeasyICS
         return $this->calendarName;
     }
 
-    /**
-     * Set the name of the calendar.
-     * @param $name
-     */
     public function setName($name)
     {
         $this->calendarName = $name;
     }
 
-    /**
-     * Render and optionally output a vcal string.
-     * @param bool $output Whether to output the calendar data directly (the default).
-     * @return string The complete rendered vlal
-     */
+   
     public function render($output = true)
     {
         //Add header

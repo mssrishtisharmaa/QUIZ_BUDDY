@@ -1,43 +1,5 @@
 <?php
-/**
- * htmlfilter.inc
- * ---------------
- * This set of functions allows you to filter html in order to remove
- * any malicious tags from it. Useful in cases when you need to filter
- * user input for any cross-site-scripting attempts.
- *
- * Copyright (C) 2002-2004 by Duke University
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	 See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
- * 02110-1301  USA
- *
- * @Author	Konstantin Riabitsev <icon@linux.duke.edu>
- * @Author  Jim Jagielski <jim@jaguNET.com / jimjag@gmail.com>
- * @Version 1.1 ($Date$)
- */
 
-/**
- * This function returns the final tag out of the tag name, an array
- * of attributes, and the type of the tag. This function is called by
- * tln_sanitize internally.
- *
- * @param string $tagname the name of the tag.
- * @param array $attary the array of attributes and their values
- * @param integer $tagtype The type of the tag (see in comments).
- * @return string A string with the final tag representation.
- */
 function tln_tagprint($tagname, $attary, $tagtype)
 {
     if ($tagtype == 2) {
@@ -60,12 +22,7 @@ function tln_tagprint($tagname, $attary, $tagtype)
 }
 
 /**
- * A small helper function to use with array_walk. Modifies a by-ref
- * value and makes it lowercase.
- *
- * @param string $val a value passed by-ref.
- * @return		void since it modifies a by-ref value.
- */
+
 function tln_casenormalize(&$val)
 {
     $val = strtolower($val);
